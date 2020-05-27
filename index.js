@@ -5,7 +5,7 @@ const superagent = require('superagent')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = 3000
+const port = 3001
 
 // Tell express to use the bodyParser middleware
 app.use(bodyParser())
