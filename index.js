@@ -1,5 +1,6 @@
 const express = require('express')
 const superagent = require('superagent')
+const cors = require('cors')
 
 // bodyParser is "middleware" that allows a JSON body to be included in post requests
 const bodyParser = require('body-parser')
@@ -9,6 +10,9 @@ const port = 3001
 
 // Tell express to use the bodyParser middleware
 app.use(bodyParser())
+
+// Tell express to use CORS, which will allow the UI and API to communicate
+app.use(cors())
 
 
 app.get('/', (req, res, next) => {
